@@ -1,0 +1,173 @@
+.search-results-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.search-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #fff5f8;
+  border: 2px solid #ffd6e6;
+  border-radius: 20px;
+  color: #f06292;
+  font-family: 'Fredoka One', cursive;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #ffd6e6;
+  transform: translateX(-2px);
+}
+
+.search-header h2 {
+  flex: 1;
+  text-align: center;
+  color: #f06292;
+  font-family: 'Fredoka One', cursive;
+  margin: 0;
+  padding: 0 48px;
+}
+
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.result-card {
+  background: white;
+  border-radius: 16px;
+  border: 2px solid #ffd6e6;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(255, 143, 171, 0.08);
+  padding: 0;
+}
+
+.result-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 214, 230, 0.5);
+}
+
+.result-content {
+  display: flex;
+  padding: 16px;
+  gap: 16px;
+  align-items: center;
+}
+
+.result-content.appointment {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 28px 32px 28px 32px;
+}
+
+.result-icon {
+  font-size: 2.2rem;
+  color: #f06292;
+  margin-top: 6px;
+}
+
+.result-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.result-details h3 {
+  color: #f06292;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.3rem;
+  margin: 0 0 10px 0;
+  align-self: center;
+  text-align: center;
+  width: 100%;
+}
+
+.result-details p {
+  margin: 0 0 4px 0;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.result-details strong {
+  color: #f06292;
+  font-weight: 600;
+}
+
+.result-type {
+  font-size: 0.8rem !important;
+  color: #999 !important;
+  margin-top: 4px !important;
+}
+
+.no-results {
+  text-align: center;
+  padding: 48px;
+  background: #fff5f8;
+  border-radius: 20px;
+  border: 2px dashed #ffd6e6;
+}
+
+.no-results p {
+  color: #666;
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.no-results small {
+  color: #999;
+}
+
+.loading {
+  text-align: center;
+  padding: 48px;
+  color: #f06292;
+  font-family: 'Fredoka One', cursive;
+}
+
+@media (max-width: 768px) {
+  .search-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .back-button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .result-content.appointment {
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px 12px 18px 12px;
+  }
+
+  .result-details h3 {
+    font-size: 1.1rem;
+  }
+
+  .result-details p {
+    font-size: 0.95rem;
+  }
+}

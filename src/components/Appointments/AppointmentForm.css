@@ -1,0 +1,286 @@
+.appointment-form-container {
+  position: relative;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ffd6e6;
+}
+
+.title-container {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px dashed #ffd6e6;
+}
+
+.title-container h2 {
+  color: #ff8fab;
+  font-family: 'Fredoka One', cursive;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 2px solid #ffd6e6;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #f06292;
+  box-shadow: 0 0 0 3px rgba(240, 98, 146, 0.1);
+}
+
+.services-group {
+  background: #fff5f8;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #ffd6e6;
+}
+
+.services-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.services-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.service-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  border: 2px solid #ffd6e6;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 143, 171, 0.2);
+}
+
+.service-card.selected {
+  background: #fff5f8;
+  border-color: #ff8fab;
+}
+
+.service-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.service-content h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #f06292;
+  padding: 0.25rem 0;
+}
+
+.size-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 8px;
+}
+
+.size-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.25rem 0;
+}
+
+.size-option input[type="radio"] {
+  accent-color: #f06292;
+  margin: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.size-label {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.service-price {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.service-checkbox {
+  margin-left: 1rem;
+}
+
+.service-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #ff8fab;
+}
+
+.total-price {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+  text-align: right;
+  border: 2px solid #ffd6e6;
+}
+
+.total-price h3 {
+  margin: 0;
+  color: #f06292;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px dashed #ffd6e6;
+}
+
+.submit-btn,
+.cancel-btn {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.submit-btn {
+  background: #f06292;
+  color: white;
+}
+
+.submit-btn:hover {
+  background: #e91e63;
+  transform: translateY(-2px);
+}
+
+.cancel-btn {
+  background: #ffd6e6;
+  color: #f06292;
+}
+
+.cancel-btn:hover {
+  background: #ffb6c1;
+  transform: translateY(-2px);
+}
+
+.service-error {
+  color: #ff5252;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.time-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.time-slot {
+  padding: 1rem;
+  border: 2px solid #ffd6e6;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+  font-weight: 500;
+  color: #666;
+}
+
+.time-slot:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 143, 171, 0.2);
+}
+
+.time-slot.selected {
+  background: #fff5f8;
+  border-color: #ff8fab;
+  color: #f06292;
+}
+
+@media (max-width: 768px) {
+  .appointment-form-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .services-row {
+    grid-template-columns: 1fr;
+  }
+
+  .time-slots-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .submit-btn,
+  .cancel-btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,388 @@
+.admin-dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f7f9fa;
+}
+
+.admin-main-content {
+  flex: 1;
+  padding: 40px 48px;
+  background: #f7f9fa;
+  min-width: 0;
+}
+
+.admin-dashboard-header {
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin-bottom: 24px;
+  color: #ff8fab;
+  letter-spacing: 1px;
+  font-family: 'Fredoka One', cursive;
+  text-align: center;
+}
+
+.pets-controls {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.search-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid #ffd6e6;
+  border-radius: 30px;
+  font-size: 1rem;
+  color: #666;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #ff8fab;
+  box-shadow: 0 0 0 3px rgba(255, 143, 171, 0.2);
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filter-select {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 0.9rem;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-select:hover {
+  border-color: #ffb6c1;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #ffb6c1;
+  box-shadow: 0 0 0 2px rgba(255, 182, 193, 0.2);
+}
+
+.pets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+  padding: 8px;
+}
+
+.pet-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(255, 143, 171, 0.1);
+  border: 2px solid #ffd6e6;
+  transition: all 0.3s ease;
+}
+
+.pet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(255, 143, 171, 0.15);
+}
+
+.pet-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.pet-type-icon {
+  font-size: 2rem;
+  padding: 12px;
+  border-radius: 50%;
+  background: #fff5f8;
+}
+
+.pet-type-icon.dog {
+  color: #ff8fab;
+}
+
+.pet-type-icon.cat {
+  color: #9c27b0;
+}
+
+.pet-type-icon.other {
+  color: #ff9800;
+}
+
+.pet-header h3 {
+  font-size: 1.5rem;
+  color: #ff8fab;
+  margin: 0;
+  font-family: 'Fredoka One', cursive;
+}
+
+.pet-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #666;
+  font-size: 1rem;
+}
+
+.info-icon {
+  color: #ff8fab;
+  font-size: 1.1rem;
+  min-width: 20px;
+}
+
+.medical-notes {
+  background: #fff5f8;
+  padding: 12px;
+  border-radius: 12px;
+  margin-top: 8px;
+}
+
+.created-date {
+  color: #999;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.loading-message,
+.error-message,
+.no-data {
+  text-align: center;
+  padding: 32px;
+  font-size: 1.1rem;
+  color: #ff8fab;
+  background: #fff5f8;
+  border-radius: 12px;
+  border: 2px dashed #ffd6e6;
+  margin: 24px 0;
+}
+
+.error-message {
+  color: #c62828;
+  background: #ffebee;
+  border-color: #ffcdd2;
+}
+
+.pet-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-button.edit {
+  color: #4a90e2;
+}
+
+.action-button.delete {
+  color: #e74c3c;
+}
+
+.action-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.action-button.edit:hover {
+  color: #357abd;
+}
+
+.action-button.delete:hover {
+  color: #c0392b;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-content h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.save-button,
+.delete-button,
+.cancel-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.save-button {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.save-button:hover {
+  background-color: #357abd;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+.cancel-button {
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+.cancel-button:hover {
+  background-color: #e0e0e0;
+}
+
+.delete-confirmation {
+  text-align: center;
+}
+
+.delete-confirmation p {
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.owner-info {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.owner-info .info-icon {
+  color: #4a90e2;
+  margin-right: 8px;
+}
+
+.pet-info {
+  padding: 15px;
+}
+
+.info-row {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.info-icon {
+  min-width: 20px;
+  color: #666;
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .admin-main-content {
+    padding: 24px;
+  }
+
+  .admin-dashboard-header {
+    font-size: 2rem;
+  }
+
+  .pets-controls {
+    flex-direction: column;
+  }
+
+  .search-container,
+  .filter-container {
+    width: 100%;
+  }
+
+  .pets-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pet-card {
+    padding: 20px;
+  }
+} 
